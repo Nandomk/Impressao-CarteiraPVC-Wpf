@@ -5,8 +5,40 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Impressao"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
-    </Grid>
+        Title="MainWindow" d:DesignHeight="969" Background="White" Width="1531">
+    <StackPanel x:Name="LayoutRoot" HorizontalAlignment="Left">
+        <Grid x:Name="headCarteirinha" Height="100">
+            <Label x:Name="lblStatus" Content="Status" Height="30" Width="642" HorizontalAlignment="Left" Margin="28,50,0,20" FontWeight="Bold" FontSize="15" />
+        </Grid>
+
+        <Grid x:Name="carteirinha"  Width="652" Height="408" Margin="50,0,0,0" HorizontalAlignment="Left" VerticalAlignment="Center" Background="Black">
+
+            <Image x:Name="fotoAtleta" Height="168" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="58,0,0,26" Width="116" Source="img/pessoa.jpg"/>
+            <Label x:Name="lblNomeClube" Content="Nome da Empresa" HorizontalAlignment="Left" Margin="51,135,0,0" VerticalAlignment="Top" Foreground="#FFFFFBFB" FontFamily="Helvetica" FontSize="22" Background="{x:Null}" Width="464"/>
+            <Label x:Name="lblNomeAtleta" Content="Nome da pessoa" HorizontalAlignment="Left" Margin="51,159,0,0" VerticalAlignment="Top" Foreground="White" FontFamily="Helvetica" FontSize="22" FontWeight="Bold" Width="464"/>
+            <Label x:Name="lblap_Copy" Content="Nasc:" HorizontalAlignment="Left" Margin="193,214,0,0" VerticalAlignment="Top" Foreground="#FFFFFBFB" FontFamily="Helvetica" FontSize="20" Background="{x:Null}"/>
+            <Label x:Name="lbcpf" Content="CPF:" HorizontalAlignment="Left" Margin="193,243,0,0" VerticalAlignment="Top" Foreground="#FFFFFBFB" FontFamily="Helvetica" FontSize="20" Background="{x:Null}"/>
+            <Label x:Name="lblNascimento" Content="03/07/1997" HorizontalAlignment="Left" Margin="254,214,0,0" VerticalAlignment="Top" Foreground="#FFFFFBFB" FontFamily="Helvetica" FontSize="20" Background="{x:Null}" FontWeight="Bold" Width="142"/>
+            <Label x:Name="lblCPF" Content="111.111.111-11" HorizontalAlignment="Left" Margin="248,243,0,0" VerticalAlignment="Top" Foreground="#FFFFFBFB" FontFamily="Helvetica" FontSize="20" Background="{x:Null}" FontWeight="Bold" Width="197"/>
+            <Image x:Name="imgLogoClube" HorizontalAlignment="Right" Height="100" Margin="0,282,30,0" VerticalAlignment="Top" Width="100"/>
+            <Grid.RenderTransform>
+                <RotateTransform x:Name="rotacionar"  />
+            </Grid.RenderTransform>
+        </Grid>
+        <Button x:Name="btImprimeAssist" Content="Imprimir" HorizontalAlignment="Left" Height="42" Margin="800,-392,122,391" VerticalAlignment="Bottom" Width="238" Click="btImprimeAssist_Click" />
+        <Button x:Name="btImprimeDireto" Content="Imprimir Imp. Padrão" HorizontalAlignment="Left" Height="42"  Width="238" Margin="800,-200,113,391" Click="btImprimeDireto_Click" VerticalAlignment="Bottom"/>
+        <Label x:Name="lblX" Content="Posição Eixo X" />
+        <TextBox x:Name="txtX" Height="24" TextWrapping="Wrap" Text="215"/>
+        <Label x:Name="lblY" Content="Posição Eixo Y" />
+        <TextBox x:Name="txtY" Height="23" TextWrapping="Wrap" Text="165"/>
+
+        <Label x:Name="label" Content="Render X"/>
+        <TextBox x:Name="txtRenderX" Text="0" />
+        <Label x:Name="label2" Content="Render Y"/>
+        <TextBox x:Name="txtRenderY" Text="0" />
+
+        <Grid VerticalAlignment="Bottom" >
+
+        </Grid>
+    </StackPanel>
 </Window>
